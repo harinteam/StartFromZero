@@ -34,8 +34,53 @@ book_titles[3] = 'Seven Habits'
 for i in range(0, len(book_titles)):
     print(book_titles[i])
 
-# Ambil Elemen
+# Ambil Elemen dgn pop
 print('\n# Ambil elemen ke 2')
 book = book_titles.pop(1)
-for i in range(0, len(book)):
+for i in range(0, len(book_titles)):
+    print(book_titles[i])
+
+# Memunculkan elemen yg diambil diatas
+print('\n# Munculkan Buku yang diambil tadi di atas')
+print(book)
+
+# Pop
+print('\n# Pop = mengambil elemen dari paling belakang')
+book_titles.pop()
+for i in range(0, len(book_titles)):
+    print(book_titles[i])
+
+# Uses pop -
+print('\n# Menggunakan pop -1')
+book_titles = ['Atomic Habits', 'First Thing First', 'Ikigai', 'Steve Jobs']
+book_titles.pop(-1)
+for i in range (0, len(book_titles)):
+    print(book_titles[i])
+
+# Menggunakan perintah del
+print('\n# Menggunakan perintah del untuk hapus elemen')
+book_titles = ['Atomic Habits', 'First Thing First', 'Ikigai', 'Steve Jobs']
+del book_titles[0]
+for i in range(0, len(book_titles)):
+    print(book_titles[i])
+
+# Perintah del dengan list comprehension
+print('\n# Menggunakan perintah del dgn list comprehension')
+book_titles = ['Atomic Habits', 'First Thing First', 'Ikigai', 'Steve Jobs']
+del book_titles[ : ]
+for i in range(0, len(book_titles)):
+    print(book_titles[i])
+
+# Perintah del dengan list comprehension start
+print('\n# Perintah del dengan list comprehension start')
+book_titles = ['Atomic Habits', 'First Thing First', 'Ikigai', 'Steve Jobs']
+del book_titles[0:-1] # START : END
+for i in range(0, len(book_titles)):
+    print(book_titles[i])
+
+# Perintah del dengan list comprehension start
+print('\n# Perintah del dengan list comprehension start')
+book_titles = ['Atomic Habits', 'First Thing First', 'Ikigai', 'Steve Jobs', 'Origami', 'Hitsimishu']
+del book_titles[0::2] # START : END : STEP
+for i in range(0, len(book_titles)):
     print(book_titles[i])
